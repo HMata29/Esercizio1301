@@ -3,12 +3,7 @@
 <jsp:include page="navbar.jsp"></jsp:include>
 <body>
 <div style="padding-left: 2rem; padding-top:4rem; ">
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class = "card-title">ciao mondo</h5>
-        <h7>${Info.name}</h7>
-        <a href="${pageContext.request.contextPath}/details">Dettagli</a>
-    </div>
+    <h1>Welcome nell'index</h1>
 </div>
 </div>
 </body>
