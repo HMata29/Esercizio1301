@@ -9,12 +9,16 @@
 <div class="container">
     <form action="${pageContext.request.contextPath}/updateDaLista" method="post">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Name</label>
-            <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="id" class="form-label">Name</label>
+            <input type="number" name="id" class="form-control" id="id" aria-describedby="emailHelp" placeholder="${idDaModificare}">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Descrizione</label>
-            <input type="text" name="description" class="form-control" id="exampleInputPassword1">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Descrizione</label>
+            <input type="text" name="description" class="form-control" id="description">
         </div>
         <button type="submit" class="btn btn-primary">Modifica</button>
     </form>

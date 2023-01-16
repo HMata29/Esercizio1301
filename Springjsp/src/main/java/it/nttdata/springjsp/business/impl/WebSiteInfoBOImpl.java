@@ -8,6 +8,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class WebSiteInfoBOImpl implements WebSiteInfoBO {
@@ -33,6 +34,19 @@ public class WebSiteInfoBOImpl implements WebSiteInfoBO {
     @Override
     public void deleteWebSiteInfo(long id) throws DataAccessException{
         webSiteInfoRepository.deleteById(id);
+    }
+
+    @Override
+    public void update(long id, String n , String d) throws DataAccessException {
+        WebSiteInfo w = webSiteInfoRepository.findById(id).orElseThrow();
+        w.setName(n);
+        w.setDescription(d);
+        webSiteInfoRepository.save(w);
+    }
+
+    @Override
+    public WebSiteInfo getWebSiteInfoById(long id) throws DataAccessException {
+        return webSiteInfoRepository.findById(id).orElseThrow();
     }
 
 }

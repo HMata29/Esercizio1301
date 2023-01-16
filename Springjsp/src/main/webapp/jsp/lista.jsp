@@ -30,7 +30,7 @@
                 <td><c:out value="${lista.getName()}"/></td>
                 <td><c:out value="${lista.getDescription()}"/></td>
                 <td><a href="${pageContext.request.contextPath}/deleteDaLista?id=${lista.getId()}">Cancella</a></td>
-                <td><a href="${pageContext.request.contextPath}/deleteDaLista?id=${lista.getId()}">Cancella</a></td>
+                <td><a href="${pageContext.request.contextPath}/updateDaLista?id=${lista.getId()}">Modifica</a></td>
             </tr></c:forEach>
             </tbody>
         </table>

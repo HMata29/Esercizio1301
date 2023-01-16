@@ -10,9 +10,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class WebSiteInfo extends BaseEntity {
-
     private String name;
-
     private String description;
+
 
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Esercizio1301.iml" filepath="$PROJECT_DIR$/.idea/Esercizio1301.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Springjsp/Springjsp.iml" filepath="$PROJECT_DIR$/Springjsp/Springjsp.iml" />
+    </modules>
+  </component>
+</project>

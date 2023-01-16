@@ -5,6 +5,7 @@ import it.nttdata.springjsp.model.WebSiteInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -73,6 +74,13 @@ public class WebSiteInfoController {
     }
     @GetMapping("updateDaLista")
     public ModelAndView updateDaLista(@RequestParam String id){
-        return new ModelAndView("/jsp/update.jsp", "id", id);
+        return new ModelAndView("/jsp/update.jsp", "idDaModificare", id);
+    }
+
+    @PostMapping("updateDaLista")
+    public ModelAndView updateInfo(@RequestParam String id, @RequestParam String name , @RequestParam String description){
+        long idLong = Long.parseLong(id);
+        webSiteInfoBO.update(idLong,name,description);
+        return new ModelAndView("/jsp/index.jsp");
     }
 }
